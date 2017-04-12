@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>code.mil</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <style>
+/*
+http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
+*/
+ .css3-shadow{
+    display: inline-block;
+    background:#fff;
+    margin: 0px 0px 20px;
+    padding: 30px 30px 10px;
+    text-align:center;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+}
+/*==================================================
+ * Drop shadow effect with box-shadow
+ * ===============================================*/
+.css3-shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+.brand {
+  font-size: 3em;
+  text-align: center;
+}
+.title {
+  color: white;
+  font-size:1.5em;
+}
+#bs-example-navbar-collapse-1 {
+  width: 100%;
+  line-height: 2.5em;
+  background-color: #567;
+}
+#bs-example-navbar-collapse-1 > nav {
+  padding: 3em 3em 3em;
+}
+#toggleMenu {
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+nav ul {
+  list-style-type: none;
+}
+#brandDiv {
+  text-align: center;
+  background: rgba(0,0,0,0);
+}
+.brand {
+  text-align: center;
+  color: black;
+}
+#bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
+  border: none;
+  background-color: #567;
+  color: white;
+}
+    </style>
+    <script>
+function toggleBanner(){
+  var tmp=document.getElementById('govBanner');
+  !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
+  tmp=document.getElementById('headerIcon');
+  tmp.classList.toggle("glyphicon-menu-down");
+  tmp.classList.toggle("glyphicon-menu-up");
+  event.preventDefault();
+}
+    </script>
+    <script src="/code.mil.page/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/code.mil.page/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar-default">
+    <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+      <div class="container-fluid row collapse" id="bs-example-navbar-collapse-1">
+    <nav class="navbar navbar-default">
+        <div class="col-sm-4">
+          <ul>
+            <li>
+              <a class="title" href="/code.mil.page/about.html">About</a>
+            </li>
+            <li>The Primer</li>
+            <ul>
+              <li>For DOD Employees</li>
+              <li>For Citizens</li>
+              <li>For press + legal</li>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a class="title" href="/code.mil.page/projects.html">Community Projects</a>
+          <ul>
+            <li>
+              <a href="/code.mil.page/projects.html">
+                Featured Projects
+              </a>
+            </li>
+            <li>
+              <a href="/code.mil.page/GLOSSARY.html">
+                Glossary
+              </a>
+            </li>
+            <li>
+              <a href="https://www.dds.mil/">
+                DDS homepage
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a class="title" href="/code.mil.page/press.html">Our Press</a>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a class="title" href="/code.mil.page/2017/04/07/another.html">Our Blog</a>
+        </div>
+    </nav>
+      </div>
+      <div id="brandDiv">
+        <a class="brand css3-shadow" href="/code.mil.page">code.mil</a>
+      </div>
+    <main id="main-content">
+    <h1 id="jquery">jQuery</h1>
+
+<blockquote>
+  <p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+</blockquote>
+
+<p>For information on how to get started and how to use jQuery, please see <a href="http://api.jquery.com/">jQuery’s documentation</a>.
+For source files and issues, please visit the <a href="https://github.com/jquery/jquery">jQuery repo</a>.</p>
+
+<p>If upgrading, please see the <a href="https://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/">blog post for 3.2.1</a>. This includes notable differences from the previous version and a more readable changelog.</p>
+
+<h2 id="including-jquery">Including jQuery</h2>
+
+<p>Below are some of the most common ways to include jQuery.</p>
+
+<h3 id="browser">Browser</h3>
+
+<h4 id="script-tag">Script tag</h4>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<h4 id="babel">Babel</h4>
+
+<p><a href="http://babeljs.io/">Babel</a> is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">$</span> <span class="nx">from</span> <span class="s2">"jquery"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<h4 id="browserifywebpack">Browserify/Webpack</h4>
+
+<p>There are several ways to use <a href="http://browserify.org/">Browserify</a> and <a href="https://webpack.github.io/">Webpack</a>. For more information on using these tools, please refer to the corresponding project’s documention. In the script, including jQuery will usually look like this…</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"jquery"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h4 id="amd-asynchronous-module-definition">AMD (Asynchronous Module Definition)</h4>
+
+<p>AMD is a module format built for the browser. For more information, we recommend <a href="http://requirejs.org/docs/whyamd.html">require.js’ documentation</a>.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">define</span><span class="p">([</span><span class="s2">"jquery"</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="node">Node</h3>
+
+<p>To include jQuery in <a href="nodejs.org">Node</a>, first install with npm.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>npm install jquery
+</code></pre>
+</div>
+
+<p>For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as <a href="https://github.com/tmpvar/jsdom">jsdom</a>. This can be useful for testing purposes.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">require</span><span class="p">(</span><span class="s2">"jsdom"</span><span class="p">).</span><span class="nx">env</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">var</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"jquery"</span><span class="p">)(</span><span class="nb">window</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+    </main>
+    <footer class="usa-footer usa-footer-medium" role="contentinfo">
+      <div class="usa-footer-secondary_section">
+        <div class="usa-grid">
+          <div class="usa-footer-logo usa-width-one-half">
+            <img class="usa-footer-logo-img" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
+            <h3 class="usa-footer-logo-heading">Defense Digital Service</h3>
+          </div>
+          <div class="usa-footer-contact-links usa-width-one-half">
+            <a class="usa-link-twitter" href="https://twitter.com/DefenseDigital">
+              <span>Twitter</span>
+            </a>
+            <a class="usa-link-medium" href="https://medium.com/@DefenseDigitalService">
+              <span>Medium</span>
+            </a>
+            <a class="usa-link-github" href="https://github.com/deptofdefense/">
+              <span>GitHub</span>
+            </a>
+            <address>
+              <h3 class="usa-footer-contact-heading">Contact us</h3>
+              <p><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+              <p><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
+            </address>
+          </div>
+        </div>
+      </div>
+      <!-- Gov banner BEGIN -->
+      <div class="panel panel-default">
+        <div id="heading" class="panel-heading">
+          <img src="https://standards.usa.gov/assets/img/favicons/favicon-57.png" alt="U.S. flag">
+          An official website of the United States government
+          <a class="button"
+             onclick="toggleBanner()">
+            Here’s how you know
+            <span id="headerIcon" class="glyphicon glyphicon-menu-down"></span>
+          </a>
+          <span style="background:red;">This site is under construction</span>
+        </div>
+        <div class="panel-body container row" hidden=true id="govBanner">
+          <div class="col-sm-6">
+            <img src="https://standards.usa.gov/assets/img/icon-dot-gov.svg" alt="Dot gov">
+            <div>
+              <p>
+              <strong>The .gov means it’s official.</strong>
+              <br>
+              Federal government websites always use a .gov or .mil domain. Before sharing sensitive information online, make sure you’re on a .gov or .mil site by inspecting your browser’s address (or “location”) bar.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="https://standards.usa.gov/assets/img/icon-https.svg" alt="SSL">
+            <div>
+              <p>This site is also protected by an SSL (Secure Sockets Layer) certificate that’s been signed by the U.S. government. The <strong>https://</strong> means all transmitted data is encrypted  — in other words, any information or browsing history that you provide is transmitted securely.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
