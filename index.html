@@ -7,12 +7,15 @@
     <title>code.mil</title>
     <link rel="stylesheet" href="/code.mil.page/css/main.css"/>
     <style>
+body {
+  background: #f9f9f9;
+}
 /*
 http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
 */
  .css3-shadow{
     display: inline-block;
-    background:#fff;
+    background:#f9f9f9;
     margin: 0px 0px 20px;
     padding: 30px 30px 10px;
     text-align:center;
@@ -67,7 +70,7 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
 nav ul {
   list-style-type: none;
 }
-#brandDiv {
+.brandDiv {
   text-align: center;
   background: rgba(0,0,0,0);
 }
@@ -80,37 +83,9 @@ nav ul {
   background-color: #567;
   color: white;
 }
-.card-outline-none {
-  border-color:transparent;
-}
-.card-shadow{
-    display: inline-block;
+.card {
     background:#fff;
-    margin-bottom: 20px;
-    padding: 30px 30px 10px;
-    text-align:center;
-    position:relative;
-    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
 }
-/*==================================================
- * Drop shadow effect with box-shadow
- * ===============================================*/
-.card-shadow:after{
-    content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    bottom:0px;
-    left:10%;
-    right:10%;
-    width:80%;
-    height:50%;
-    -moz-border-radius:100%;
-    border-radius:100%;
-}
-
     </style>
     <script>
 function toggleBanner(){
@@ -187,7 +162,7 @@ function toggleBanner(){
         </div>
     </nav>
       </div>
-      <div id="brandDiv">
+      <div class="brandDiv">
         <a class="brand css3-shadow" href="/code.mil.page">code.mil</a>
       </div>
     <main id="main-content" class="container">
@@ -220,43 +195,43 @@ What are the details of how this works?
 
 <section class="row">
 
-<div class="col-md-5 card col-md-offset-1">
-apache/accumulo
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>apache/accumulo</h3>
 <br />Lorum Ipsum
 <br />And lots of info.
 <br />And lots of info.
 </div>
 
-<div class="col-md-5 card col-md-offset-1">
-codice/ddf
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>codice/ddf</h3>
 <br />Lorum Ipsum
 <br />And lots of info.
 <br />And lots of info.
 </div>
 
-<div class="col-md-5 card col-md-offset-1">
-deptofdefense/eMCM
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>deptofdefense/eMCM</h3>
 <br />Lorum Ipsum
 <br />And lots of info.
 <br />And lots of info.
 </div>
 
-<div class="col-md-5 card col-md-offset-1">
-globus/globus-toolkit
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>globus/globus-toolkit</h3>
 <br />Lorum Ipsum
 <br />And lots of info.
 <br />And lots of info.
 </div>
 
-<div class="col-md-5 card col-md-offset-1">
-opencpi/opencpi
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>opencpi/opencpi</h3>
 <br />Lorum Ipsum
 <br />And lots of info.
 <br />And lots of info.
 </div>
 
-<div class="col-md-5 card col-md-offset-1">
-doughodson/OpenEaagles
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>doughodson/OpenEaagles</h3>
 <br />Lorum Ipsum
 <br />And lots of info.
 <br />And lots of info.
@@ -264,63 +239,52 @@ doughodson/OpenEaagles
 
 </section>
 
-<h1 id="defense-digital-service-recommendations-for-open-source-dod-projects">Defense Digital Service Recommendations for Open Source DoD Projects</h1>
+<section class="row">
+<div class="col-md-6 brandDiv">
+<h3 style="width=100%">Recent blog posts</h3>
+</div>
+<div class="col-md-6 brandDiv">
+<h3 style="width=100%">In the News</h3>
+</div>
+<section>
 
-<p>The U.S. Department of Defense faces unique challenges in open sourcing its code. Unlike most software projects, code written by U.S. Federal government employees typically does not have copyright protections under U.S. and some international laws. This can make it hard to attach an open source license to our code. Defense Digital Service offers solutions to these problems.</p>
 
-<p>Defense Digital Service has technical, legal and administrative resources available to assist U.S. Department of Defense agencies in evaluating its software projects for general release. Please see:</p>
+# Defense Digital Service Recommendations for Open Source DoD Projects
 
-<ul>
-  <li>Our <a href="implementation-guide.html">Defense Digital Service Recommendations for Open Source DoD Projects</a></li>
-  <li>Contact us at <a href="https://www.dds.mil/">https://www.dds.mil/</a></li>
-</ul>
+The U.S. Department of Defense faces unique challenges in open sourcing its code. Unlike most software projects, code written by U.S. Federal government employees typically does not have copyright protections under U.S. and some international laws. This can make it hard to attach an open source license to our code. Defense Digital Service offers solutions to these problems.
 
-<h2 id="this-projects-goal">This project’s goal</h2>
+Defense Digital Service has technical, legal and administrative resources available to assist U.S. Department of Defense agencies in evaluating its software projects for general release. Please see:
 
-<p>We are motivated to help the U.S. Department of Defense maintain technical superiority by engaging the brightest public minds in its projects. This best practice is openly embraced in the private sector and we are helping adopt this practice in the public sector.</p>
+* Our [Defense Digital Service Recommendations for Open Source DoD Projects](implementation-guide.html)
+* Contact us at [https://www.dds.mil/](https://www.dds.mil/)
 
-<p>The Defense Digital Service is an agency team of the U.S. Digital Service, which is part of the Executive Office of the President. Recommendations that we provide are NOT official Department of Defense policy. We are collaborating with legal and leadership roles throughout Department of Defense agencies to ensure that our advice is relevant.</p>
+## This project's goal
 
-<h2 id="get-involved">Get involved</h2>
+We are motivated to help the U.S. Department of Defense maintain technical superiority by engaging the brightest public minds in its projects. This best practice is openly embraced in the private sector and we are helping adopt this practice in the public sector.
 
-<p>Please see <a href="https://github.com/deptofdefense/code.mil/">our GitHub project page</a> to participate in updating our recommendations.</p>
+The Defense Digital Service is an agency team of the U.S. Digital Service, which is part of the Executive Office of the President. Recommendations that we provide are NOT official Department of Defense policy. We are collaborating with legal and leadership roles throughout Department of Defense agencies to ensure that our advice is relevant.
 
-<h2 id="more-agency-specific-resources-for-open-source-and-software-release-policies">More agency-specific resources for open source and software release policies</h2>
+## Get involved
 
-<ul>
-  <li>Department of the Army
-    <ul>
-      <li>Research, Development and Engineering Command
-        <ul>
-          <li>Army Research Laboratory
-            <ul>
-              <li><a href="https://github.com/USArmyResearchLab/ARL-Open-Source-Guidance-and-Instructions">The U.S. Army Research Laboratory (ARL) Software Release Process for Unrestricted Public Release</a></li>
-              <li><a href="https://github.com/USArmyResearchLab">Army Research Laboratory’s GitHub organization page</a>
-is the preferred publication location for ARL’s projects per
-<a href="https://github.com/USArmyResearchLab/ARL-Open-Source-Guidance-and-Instructions">ARL policy</a>.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>General Services Administration
-    <ul>
-      <li>18F
-        <ul>
-          <li><a href="https://github.com/18F/open-source-policy">18F Open Source Policy</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+Please see [our GitHub project page](https://github.com/deptofdefense/code.mil/) to participate in updating our recommendations.
 
-<p>And following is Federal-government-wide policy on source code distribution:</p>
+## More agency-specific resources for open source and software release policies
 
-<ul>
-  <li><a href="https://code.gov/#/policy-guide/docs/overview/introduction]">U.S. Federal Source Code Policy</a></li>
-  <li><a href="https://code.gov/#/policy-guide/docs/compliance/inventory-code">Enterprise code inventory</a></li>
-</ul>
+* Department of the Army
+  * Research, Development and Engineering Command
+    * Army Research Laboratory
+      * [The U.S. Army Research Laboratory (ARL) Software Release Process for Unrestricted Public Release](https://github.com/USArmyResearchLab/ARL-Open-Source-Guidance-and-Instructions)
+      * [Army Research Laboratory's GitHub organization page](https://github.com/USArmyResearchLab)
+        is the preferred publication location for ARL's projects per
+        [ARL policy](https://github.com/USArmyResearchLab/ARL-Open-Source-Guidance-and-Instructions).
+* General Services Administration
+  * 18F
+    * [18F Open Source Policy](https://github.com/18F/open-source-policy)
+
+And following is Federal-government-wide policy on source code distribution:
+
+* [U.S. Federal Source Code Policy](https://code.gov/#/policy-guide/docs/overview/introduction])
+* [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
 <div class="usa-grid">
 <div class="usa-width-one-half">
@@ -332,7 +296,7 @@ is the preferred publication location for ARL’s projects per
     
     <span class="post-meta">Apr 7, 2017</span>
     <h2>
-      <a class="post-link" href="/code.mil.page/2017/04/07/another.html">Another</a>
+     <a class="post-link" href="/code.mil.page/2017/04/07/another.html">Another</a>
     </h2>
   </li>
 
@@ -340,7 +304,7 @@ is the preferred publication location for ARL’s projects per
     
     <span class="post-meta">Mar 17, 2017</span>
     <h2>
-      <a class="post-link" href="/code.mil.page/initial/2017/03/17/welcome-to-jekyll.html">Welcome to Code.mil!</a>
+     <a class="post-link" href="/code.mil.page/initial/2017/03/17/welcome-to-jekyll.html">Welcome to Code.mil!</a>
     </h2>
   </li>
 
@@ -348,7 +312,7 @@ is the preferred publication location for ARL’s projects per
     
     <span class="post-meta">Mar 17, 2017</span>
     <h2>
-      <a class="post-link" href="/code.mil.page/initial/2017/03/17/post-number-two.html">Next Post</a>
+     <a class="post-link" href="/code.mil.page/initial/2017/03/17/post-number-two.html">Next Post</a>
     </h2>
   </li>
 
@@ -442,14 +406,11 @@ xhr.onload = function() {
 xhr.send();
 
 </script>
-
+</section></section>
 
     </main>
-    <div class="container">
-      <div class="card-shadow">
-      <div class="col-md-4 col-md-offset-1">
-        <div class="card text-center card-outline-none">
-          <div class="card-block">
+    <section class="container">
+        <div class="col-md-4 card card-block text-center card-outline-none" >
             <h4 class="card-title">Defense Digital Service</h4>
             <p class="card-text">
               <a class="btn" href="https://twitter.com/DefenseDigital">
@@ -462,27 +423,16 @@ xhr.send();
                 <span>GitHub</span>
               </a>
             </p>
-          </div>
-        </div>
       </div>
-        <div class="col-xs-2">
-          
-              <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
-         
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center card-outline-none">
-            <div class="card-block">
-              <h3 class="card-title">Contact us</h3>
-              <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
-              <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"> </div>
-     </div>
-    </div>
-    <div class="card-shadow">TEST</div>
+      <div class="col-md-4">
+            <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
+      </div>
+      <div class="col-md-4 card text-center card-outline-none card-block">
+        <h3 class="card-title">Contact us</h3>
+        <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+        <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
+      </div>
+    </section>
     <footer class="usa-footer usa-footer-medium" role="contentinfo">
       <!-- Gov banner BEGIN -->
       <div class="panel panel-default">
