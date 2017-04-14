@@ -1,4 +1,172 @@
-<p>Initial post.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>code.mil</title>
+    <link rel="stylesheet" href="/code.mil.page/css/main.css"/>
+    <style>
+body {
+  background: #f9f9f9;
+}
+/*
+http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
+*/
+ .css3-shadow{
+    display: inline-block;
+    background:#f9f9f9;
+    margin-bottom: 20px;
+    padding: 30px 30px 10px;
+    text-align:center;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+}
+/*==================================================
+ * Drop shadow effect with box-shadow
+ * ===============================================*/
+.css3-shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+.brand {
+  font-size: 3em;
+  text-align: center;
+}
+.title {
+  color: white;
+  font-size:1.5em;
+}
+#bs-example-navbar-collapse-1 {
+  width: 100%;
+  line-height: 2.5em;
+  background-color: #567;
+}
+#bs-example-navbar-collapse-1 > nav {
+  padding: 3em 3em 3em;
+}
+#toggleMenu {
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+nav ul {
+  list-style-type: none;
+}
+.brandDiv {
+  text-align: center;
+  background: rgba(0,0,0,0);
+}
+.brand {
+  text-align: center;
+  color: black;
+}
+#bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
+  border: none;
+  background-color: #567;
+  color: white;
+}
+.card {
+    background:#fff;
+}
+    </style>
+    <script>
+function toggleBanner(){
+  var tmp=document.getElementById('govBanner');
+  !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
+  tmp=document.getElementById('headerIcon');
+  tmp.classList.toggle("glyphicon-menu-down");
+  tmp.classList.toggle("glyphicon-menu-up");
+  event.preventDefault();
+}
+    </script>
+    <script src="/code.mil.page/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/code.mil.page/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar-default">
+    <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+      <div class="container-fluid row collapse in" id="bs-example-navbar-collapse-1">
+    <nav class="navbar navbar-default">
+        <div class="col-sm-4">
+          <ul>
+            <li>
+              <a class="title" href="/code.mil.page/about.html">About</a>
+            </li>
+            <li>The Primer</li>
+            <ul>
+              <li>For DOD Employees</li>
+              <li>For Citizens</li>
+              <li>For press + legal</li>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a class="title" href="/code.mil.page/projects.html">Community Projects</a>
+          <ul>
+            <li>
+              <a href="/code.mil.page/projects.html">
+                Featured Projects
+              </a>
+            </li>
+            <li>
+              <a href="/code.mil.page/GLOSSARY.html">
+                Glossary
+              </a>
+            </li>
+            <li>
+              <a href="https://www.dds.mil/">
+                DDS homepage
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a class="title" href="/code.mil.page/press.html">Our Press</a>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a class="title" href="/code.mil.page/2017/04/07/another.html">Our Blog</a>
+        </div>
+    </nav>
+      </div>
+      <div class="brandDiv">
+          <a class="brand css3-shadow" href="/code.mil.page/">Welcome to Code.mil!</a>
+      </div>
+    <main id="main-content" class="container">
+    <p>Initial post.
 You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
@@ -13,3 +181,64 @@ You’ll find this post in your <code class="highlighter-rouge">_posts</code> di
 
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
+
+    </main>
+    <section class="container">
+        <div class="col-md-4 card card-block text-center card-outline-none" >
+            <h4 class="card-title">Defense Digital Service</h4>
+            <p class="card-text">
+              <a class="btn" href="https://twitter.com/DefenseDigital">
+                <span>Twitter</span>
+              </a>
+              <a class="btn" href="https://medium.com/@DefenseDigitalService">
+                <span>Medium</span>
+              </a>
+              <a class="btn" href="https://github.com/deptofdefense/">
+                <span>GitHub</span>
+              </a>
+            </p>
+      </div>
+      <div class="col-md-4">
+            <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
+      </div>
+      <div class="col-md-4 card text-center card-outline-none card-block">
+        <h3 class="card-title">Contact us</h3>
+        <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+        <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
+      </div>
+    </section>
+    <footer class="usa-footer usa-footer-medium" role="contentinfo">
+      <!-- Gov banner BEGIN -->
+      <div class="panel panel-default">
+        <div id="heading" class="panel-heading">
+          <img src="https://standards.usa.gov/assets/img/favicons/favicon-57.png" alt="U.S. flag">
+          An official website of the United States government
+          <a class="button"
+             onclick="toggleBanner()">
+            Here’s how you know
+            <span id="headerIcon" class="glyphicon glyphicon-menu-down"></span>
+          </a>
+          <span style="background:red;">This site is under construction</span>
+        </div>
+        <div class="panel-body container row" hidden=true id="govBanner">
+          <div class="col-sm-6">
+            <img src="https://standards.usa.gov/assets/img/icon-dot-gov.svg" alt="Dot gov">
+            <div>
+              <p>
+              <strong>The .gov means it’s official.</strong>
+              <br>
+              Federal government websites always use a .gov or .mil domain. Before sharing sensitive information online, make sure you’re on a .gov or .mil site by inspecting your browser’s address (or “location”) bar.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="https://standards.usa.gov/assets/img/icon-https.svg" alt="SSL">
+            <div>
+              <p>This site is also protected by an SSL (Secure Sockets Layer) certificate that’s been signed by the U.S. government. The <strong>https://</strong> means all transmitted data is encrypted  — in other words, any information or browsing history that you provide is transmitted securely.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
